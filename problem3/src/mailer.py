@@ -5,6 +5,18 @@ from smtplib import SMTP
 
 
 def send_email(sender, recipient, subject, body):
+    """
+    Sends an email using SMTP.
+
+    Args:
+        sender (str): Email address of the sender.
+        recipient (str): Email address of the recipient.
+        subject (str): Subject of the email.
+        body (str): Body of the email.
+
+    Returns:
+        None
+    """
     msg = MIMEMultipart("alternative")
     msg["From"] = sender
     msg["To"] = recipient

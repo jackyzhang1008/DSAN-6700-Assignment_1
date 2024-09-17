@@ -3,6 +3,15 @@ from mailer import send_email
 
 
 def setup_args(parser):
+    """
+    Sets up the argument parser for command-line arguments.
+
+    Args:
+        parser (ArgumentParser): The ArgumentParser object to configure.
+
+    Returns:
+        ArgumentParser: The configured parser object.
+    """
     parser.add_argument("-s", "--sender", type=str, required=True)
     parser.add_argument("-r", "--recipient", type=str, required=True)
     parser.add_argument("-j", "--subject", type=str, default="Subject")
