@@ -25,5 +25,3 @@ This project provides an email alert system using a Python package that sends em
 3.  Start the local SMTP debugging server: `poetry run python -m smtpd -n -c DebuggingServer localhost:1025`
 
 4.  In a separate terminal, run the email alert script: `poetry run python src/alert.py -s sender@example.com -r recipient@example.com -j "Subject" -b "Email Body` .After running the email alert script, the SMTP terminal will display the email message that was "sent." It won’t actually send the email, but you will see the details printed in the terminal.
-
-5. It will automatically generate the sphinx html in the browser
