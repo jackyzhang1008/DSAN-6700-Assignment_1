@@ -40,7 +40,7 @@ jobs:
 
         #  Converts the .rst files into HTML documentation.
         # This command builds the HTML documentation from the .rst files in the docs/source directory and places the final documentation in docs/build.
-        # Correct! If  GitHub Actions workflow is using sphinx-apidoc to automatically generate the .rst files, 
+        #  If  GitHub Actions workflow is using sphinx-apidoc to automatically generate the .rst files, 
         # then do not need to run ''poetry run sphinx-quickstart docs'' manually
 
     - name: Verify Documentation
