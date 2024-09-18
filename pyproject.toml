@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "email_alerting and machine learning operations"
+version = "0.1.0"
+description = "A project combining email alerting and machine learning operations"
+authors = ["bella20000605 <js5081@georgetown.edu>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pre-commit = "^3.8.0"
+
+[tool.poetry.group.dev.dependencies]
+sphinx-autoapi = "^3.3.1"
+sphinx-rtd-theme = "^2.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

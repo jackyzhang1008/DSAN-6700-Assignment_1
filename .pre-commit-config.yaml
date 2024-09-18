@@ -1,0 +1,19 @@
+
+# Pre-commit hook configuration for ruff
+repos:
+    # The repository URL is pointing to Ruff's pre-commit repository, which is designed to work with pre-commit hooks.
+    # This is the correct way to use Ruff with pre-commit.
+  - repo: https://github.com/charliermarsh/ruff-pre-commit # https://github.com/charliermarsh/ruff#usage
+    rev: 'v0.1.5'  # Adjust to the latest version of Ruff
+    hooks:
+      # Run the linter.
+      - id: ruff
+        args: [ --fix ] #  (to automatically fix issues).
+      # Run the formatter.
+      - id: ruff-format
+
+  # The pre-commit hooks are installed in the .git/hooks/ directory of your Git project. 
+  # You won’t see the .git folder by default because it is a hidden directory.
+
+
+ 

@@ -1,4 +1,4 @@
-name: Mailer CI  # Name of the workflow
+name: CI  # Name of the workflow
 
 on:
   push:
