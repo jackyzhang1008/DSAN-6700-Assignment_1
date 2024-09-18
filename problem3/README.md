@@ -25,3 +25,5 @@ This project provides an email alert system using a Python package that sends em
 3.  Start the local SMTP debugging server: `bash poetry run python -m smtpd -n -c DebuggingServer localhost:1025`
 
 4.  In a separate terminal, run the email alert script: `bash poetry run python src/alert.py`
+
+5.
