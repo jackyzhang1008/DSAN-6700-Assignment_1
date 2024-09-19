@@ -20,6 +20,9 @@ jobs:
 
     - name: Install package
       run: poetry install
-    
+
+    - name: Run pytest
+      run: poetry run pytest
+      
     - name: Build documentation
       run: poetry run make html --directory docs/
