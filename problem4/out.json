@@ -1,0 +1,26 @@
+[
+    {
+        "dataset": "iris",
+        "architecture": "KNN",
+        "features": 0.9866666666666667,
+        "data": [
+            5.1,
+            3.5,
+            1.4,
+            0.2
+        ],
+        "label": "setosa"
+    },
+    {
+        "dataset": "iris",
+        "architecture": "KNN",
+        "features": 0.9866666666666667,
+        "data": [
+            6.2,
+            2.9,
+            4.3,
+            1.3
+        ],
+        "label": "versicolor"
+    }
+]

@@ -17,8 +17,12 @@ dependencies:
   - wheel=0.44.0=py39hca03da5_0
   - xz=5.4.6=h80987f9_1
   - zlib=1.2.13=h18a0788_1
-  - plotly
-  - pandas
+  - numpy=1.25.2
+  - pandas=2.1.1
   - scikit-learn
-  - umap-learn
+  - umap-learn=0.5.4
+  - pip
+  - pip:
+    - plotly==5.17.0
+    - kaleido 
 prefix: /opt/homebrew/anaconda3/envs/dsan-6700
