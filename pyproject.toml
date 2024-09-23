@@ -6,7 +6,7 @@ authors = ["bella20000605 <js5081@georgetown.edu>"]
 license = "MIT"
 readme = "README.md"
 packages = [
-    { include = "ml_app" }
+    { include = "ml_app", from = "problem4" }
 ]
 
 [tool.poetry.dependencies]
