@@ -33,3 +33,9 @@ python visualize.py
 ```
 
 This will generate an interactive scatter plot for the Iris dataset and save the result in `public/index.html`.
+
+## Visualization
+
+A static screenshot of the plot is attached here to get an understanding of the results:
+
+![Iris Clusters](iris_clusters.png)

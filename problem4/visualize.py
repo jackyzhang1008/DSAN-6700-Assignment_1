@@ -17,10 +17,16 @@ def main():
         x=0,
         y=1,
         color=iris.target.astype(str),
-        labels={"color": "species"}
+        title="UMAP Projection of the Iris Dataset",
+        labels={"color": "species", "0": "UMAP 1", "1": "UMAP 2"},
+        template="plotly"
     )
 
+    # Save the interactive plot as an HTML file
     fig.write_html("public/index.html")
+
+    # Save the plot as a PNG image for embedding in the README
+    fig.write_image("iris_clusters.png")
 
 if __name__ == "__main__":
     main()
