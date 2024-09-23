@@ -2,7 +2,7 @@
 
 ## Project Directory Structure
 
-```plaintext
+``` plaintext
 .
 ├── Makefile                      # File to automate tasks like building, testing, etc.
 ├── README.md                     # Unified README for the entire project
@@ -60,53 +60,54 @@
 
 ## Overview
 
-1. **Email Alert System**:
+1.  **Email Alert System**:
 
 This project provides an email alert system using a Python package that sends email notifications to users. The project is built with modern Python packaging techniques using `Poetry` and leverages `GitHub Actions` for Continuous Integration (CI). The email alert functionality is implemented through two Python scripts: `alert.py` and `mailer.py` under the directory `src/`. The `alert.py` script is responsible for sending email alerts, while the `mailer.py` script defines the email logic. The project also includes a pre-commit hook using `Ruff` to ensure that code is formatted correctly and adheres to best practices before it’s committed.
 
-2. **ML Model System**:
+2.  **ML Model System**:
 
 The ML Model System focuses on training, performing inference, and visualizing a machine learning model on the Iris dataset using a K-Nearest Neighbors (KNN) classifier. The system includes scripts for each stage of the workflow: training the model, running inference on new data, and visualizing the results using UMAP for dimensionality reduction.
 
 ## Features
 
-1. **Email Alert System**:
+1.  **Email Alert System**:
 
 -   Send email alerts via a local SMTP server.
 -   Structured as a Python package using `Poetry`.
 -   Automatic formatting and linting using `pre-commit` hooks.
 -   Continuous Integration (CI) pipeline with `GitHub Actions`.
 
-2. **ML Model System**:
+2.  **ML Model System**:
 
     **Model Training**:
-    - The `train.py` script trains a KNN model on the Iris dataset using a specified train-test split ratio (default is 50%).
-    - After training, the model is evaluated for accuracy, and the trained model is saved to a file (`knn_model.pkl`) for later use during inference.
-    - The Iris dataset is split into training and test sets, and accuracy is computed based on the test set.
+
+    -   The `train.py` script trains a KNN model on the Iris dataset using a specified train-test split ratio (default is 50%).
+    -   After training, the model is evaluated for accuracy, and the trained model is saved to a file (`knn_model.pkl`) for later use during inference.
+    -   The Iris dataset is split into training and test sets, and accuracy is computed based on the test set.
 
     **Inference**:
-    - The `inference.py` script loads the saved KNN model (`knn_model.pkl`) and performs inference on new data provided via an environment variable (`DATA`).
-    - The input data must be in JSON format, and the output predictions (including the input features and predicted labels) are saved to a file (`out.json`).
+
+    -   The `inference.py` script loads the saved KNN model (`knn_model.pkl`) and performs inference on new data provided via an environment variable (`DATA`).
+    -   The input data must be in JSON format, and the output predictions (including the input features and predicted labels) are saved to a file (`out.json`).
 
     **Visualization**:
-    - The `visualize.py` script reduces the dimensionality of the Iris dataset using UMAP (Uniform Manifold Approximation and Projection) to generate 2D projections from the original 4D feature space.
-    - The resulting visualization is created using Plotly and saved as both an interactive HTML file (`public/index.html`) and a static PNG image (`iris_clusters.png`).
 
-    ### Usage Instructions
+    -   The `visualize.py` script reduces the dimensionality of the Iris dataset using UMAP (Uniform Manifold Approximation and Projection) to generate 2D projections from the original 4D feature space.
+    -   The resulting visualization is created using Plotly and saved as both an interactive HTML file (`public/index.html`) and a static PNG image (`iris_clusters.png`).
 
-    #### 1. Train the Model
+    \### Usage Instructions
+
+    \#### 1. Train the Model
 
     To train the KNN model and save it for inference, run:
 
-    ```bash
-    poetry run python src/ml_app/train.py
-
+    \`\`\`bash poetry run python src/ml_app/train.py
 
 ### Steps
 
 1.  Clone the repository:
 
-    ``` 
+    ```         
     git clone https://github.com/jackyzhang1008/DSAN-6700-Assignment_1.git
     cd DSAN-6700-Assignment_1/problem_3
     ```
@@ -116,3 +117,5 @@ The ML Model System focuses on training, performing inference, and visualizing a
 3.  Start the local SMTP debugging server: `poetry run python -m smtpd -n -c DebuggingServer localhost:1025`
 
 4.  In a separate terminal, run the email alert script: `poetry run python src/alert.py -s sender@example.com -r recipient@example.com -j "Subject" -b "Email Body` .After running the email alert script, the SMTP terminal will display the email message that was "sent." It won’t actually send the email, but you will see the details printed in the terminal.
+
+readthedocs: [dsan-6700-assignment-1.readthedocs.io](http://dsan-6700-assignment-1.readthedocs.io/)
