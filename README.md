@@ -1,5 +1,8 @@
 # DSAN-6700-Assignment_1
 
+## Project Directory Structure
+
+```plaintext
 .
 ├── Makefile                      # File to automate tasks like building, testing, etc.
 ├── README.md                     # Unified README for the entire project
@@ -51,7 +54,7 @@
     └── email_system/             # Module for Problem 3 (Email alert system)
         ├── alert.py              # Alert system logic
         └── mailer.py             # Email logic implementation
-
+```
 
 # Project Title: Email Alert & ML Modelling System
 
