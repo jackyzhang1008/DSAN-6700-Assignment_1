@@ -16,12 +16,12 @@ author = 'Isfar Baset, Sheeba Moghal, Bella Shi, Jacky Zhang, Ziyan Di'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
-    'sphinx.ext.viewcode',
-    'autoapi.extension'
+    'sphinx.ext.viewcode'
+    # 'autoapi.extension'
 ]
 
 # AutoAPI configuration 
-autoapi_dirs = ['../ml_app']  
+# autoapi_dirs = ['../ml_app']  
 
 templates_path = ['_templates']
 exclude_patterns = []
