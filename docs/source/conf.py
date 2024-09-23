@@ -1,13 +1,4 @@
 # Configuration file for the Sphinx documentation builder.
-
-import os
-import sys
-
-sys.path.insert(
-    0, os.path.abspath("../../src")
-)  # Adjust the path based on your project structure
-
-
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
@@ -15,22 +6,30 @@ sys.path.insert(
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "mail_alerting and machine learning operations"
-copyright = "2024, team"
-author = "team"
-release = "0.1.0"
+project = 'dsan-6700-assignment-1'
+copyright = '2024, Isfar Baset, Sheeba Moghal, Bella Shi, Jacky Zhang, Ziyan Di'
+author = 'Isfar Baset, Sheeba Moghal, Bella Shi, Jacky Zhang, Ziyan Di'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["sphinx.ext.autodoc"]
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode'
+    # 'autoapi.extension'
+]
 
-templates_path = ["_templates"]
+# AutoAPI configuration 
+# autoapi_dirs = ['../ml_app']  
+
+templates_path = ['_templates']
 exclude_patterns = []
+
 
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "alabaster"
-html_static_path = ["_static"]
+html_theme = 'alabaster'
+html_static_path = ['_static']
