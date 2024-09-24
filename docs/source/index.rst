@@ -130,10 +130,10 @@ This section walks through the implementation of the email alert system, which s
 
 1. Cloning the Repository 
 
-    ``
+    ```
     git clone https://github.com/your_username/DSAN-6700-Assignment_1.git
     cd DSAN-6700-Assignment_1
-    ``
+    ```
 
 2. Setting up a virtual environment 
 
@@ -148,7 +148,6 @@ This section walks through the implementation of the email alert system, which s
     ```
 
     poetry install 
-
     ```
 
 
@@ -161,7 +160,6 @@ This will start the local SMTP debugging server that will print the email conten
     ```
 
     poetry run python -m smtpd -n -c DebuggingServer localhost:1025
-
     ```
 
 2. Send an email alert
@@ -170,7 +168,6 @@ We run the  `alert.py` works, make sure we run the following code to trigger an 
 
     ```
     poetry run python src/email_system/alert.py -s sender@example.com -r recipient@example.com -j "Test Subject" -b "This is a test email."
-
     ```
 * `Alert.py`: This script is responsible for gathering the necessary information (sender, recipient, subject, and body of the email) from the command line and passing it to the mailer.py module to actually send the email. 
 * `Mailer.py`: This script contains the logic for constructing and sending the email using the SMTP (Simple Mail Transfer Protocol) protocol. It's a utility that can be reused by other parts of the application as well.
@@ -185,14 +182,12 @@ We run the  `alert.py` works, make sure we run the following code to trigger an 
 
     ```
     poetry run python problem4/train.py
-
     ```
 
 2. Then perform inference using `inference.py` which loads the saved KNN model and performs inference on new data on new data using the trained KNN model
    
     ```
     poetry run python problem4/inference.py --data "out.json"
-
     ```
     The inferences here will be saved as `out.json`
 
@@ -200,7 +195,6 @@ We run the  `alert.py` works, make sure we run the following code to trigger an 
 
     ```
     poetry run python problem4/visualize.py
-
     ```
 The result will be saved as an image (iris_clusters.png) and an interactive HTML file (index.html).
 
@@ -209,16 +203,15 @@ The result will be saved as an image (iris_clusters.png) and an interactive HTML
 We use Sphinx for generating technical documentation. The documentation can be built locally and viewed as an HTML file. 
 
  * Install Dependencies
+   
     ```
     poetry add sphinx
-
     ```
  * Build the Documentation 
     
     ```
     cd docs
     poetry run make html
-    
     ```
 The documentation will be generated in the docs/build/html/ directory.
 
@@ -282,7 +275,7 @@ Before running the script, make sure that you have the required dependencies ins
 
 To activate the `dsan-6700` environment, run the following command in your terminal:
 
-```bash
+```
 conda activate dsan-6700
 
 ```
