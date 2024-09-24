@@ -132,7 +132,7 @@ This section walks through the implementation of the email alert system, which s
     ```
 
 
-## Mail Alert Sys
+## Mail Alert System
 
 
 1. Start Local SMTP Server 
