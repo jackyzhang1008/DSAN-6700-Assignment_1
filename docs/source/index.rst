@@ -27,7 +27,7 @@ DSAN-6700-Assignment_1
 Project Directory Structure
 ======================
 
-
+```
 ├── Makefile                      # File to automate tasks like building, testing, etc.
 ├── README.md                     # Unified README for the entire project
 ├── build/                        # Directory for build artifacts (compiled files, etc.)
@@ -78,7 +78,7 @@ Project Directory Structure
     └── email_system/             # Module for Problem 3 (Email alert system)
         ├── alert.py              # Alert system logic
         └── mailer.py             # Email logic implementation
-
+```
 
 Overview
 ======================
