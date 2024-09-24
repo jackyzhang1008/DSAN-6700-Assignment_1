@@ -221,9 +221,8 @@ We use Sphinx for generating technical documentation. The documentation can be b
 
     cd docs
     poetry run make html
+    try run make html
 
-try run make html
-    ```
 The documentation will be generated in the docs/build/html/ directory.
 
   * We use GitHub Actions for CI automation. The CI pipeline runs every time new changes are pushed to the repository.
