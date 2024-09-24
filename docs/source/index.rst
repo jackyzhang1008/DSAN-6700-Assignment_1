@@ -12,20 +12,20 @@
 .. `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
 .. documentation for details.
 
-
-.. .. toctree::
-..    :maxdepth: 2
-..    :caption: Contents:
-
-..    modules
-
-
 DSAN-6700-Assignment_1
-======================
+==========================
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   modules
 
 
 Project Directory Structure
-======================
+=============================
 
 ```
 ├── Makefile                      # File to automate tasks like building, testing, etc.
@@ -239,13 +239,11 @@ Welcome to the documentation for **DSAN 6700 Assignment 1**. This project consis
 
 The documentation provides instructions on how to set up, use, and contribute to the project. Below is the table of contents to help navigate through the project documentation.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+.. .. toctree::
+..    :maxdepth: 2
+..    :caption: Contents:
 
-   installation
-   usage
-   api_reference
+..     modules
 
 Project Overview
 ================
@@ -285,5 +283,6 @@ To activate the `dsan-6700` environment, run the following command in your termi
 ```bash
 conda activate dsan-6700
 ```
+
 
 
