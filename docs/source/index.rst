@@ -115,16 +115,20 @@ Features
     -   The `visualize.py` script reduces the dimensionality of the Iris dataset using UMAP (Uniform Manifold Approximation and Projection) to generate 2D projections from the original 4D feature space.
     -   The resulting visualization is created using Plotly and saved as both an interactive HTML file (`public/index.html`) and a static PNG image (`iris_clusters.png`).
 
-    \### Usage Instructions
+Usage Instructions
+------------------
 
-    \#### 1. Train the Model
+1. Train the Model
+------------------
+
+Setting up
+==========
 
     To train the KNN model and save it for inference, run:
 
 
-### Steps
-
-## Setting up:
+Steps
+=====
 
 This section walks through the implementation of the email alert system, which sends email notifications using Python. The system is built using `Poetry` for modern project packaging, with GitHub Actions integrated for Continuous Integration (CI).
 
@@ -154,7 +158,8 @@ This section walks through the implementation of the email alert system, which s
 
 
 
-## Mail Alert System
+Mail Alert System
+=================
 
 
 1. Start Local SMTP Server 
@@ -180,7 +185,8 @@ We run the  `alert.py` works, make sure we run the following code to trigger an 
    
    The project uses GitHub Actions for CI to automate testing and code quality checks. The CI workflow is triggered when changes are pushed to the repository as `ci.yml`
 
-## ML Model Systems 
+ML Model Systems
+================
 
 1. Set up a virtual environment and train the model using the `train.py` which is used to train the KNN model 
 
@@ -253,22 +259,26 @@ The documentation provides instructions on how to set up, use, and contribute to
 Project Overview
 ================
 
-###Email Alert System
+Email Alert System
+==================
 
 The email alert system allows users to send automated email notifications using a local SMTP server. The system is implemented using modern Python packaging and includes unit tests for reliability.
 
-###ML Model System
+ML Model System
+===============
 
 The ML Model System trains a K-Nearest Neighbors (KNN) model using the Iris dataset. The system includes scripts for training, inference, and visualization of the results. The visualizations use UMAP for dimensionality reduction, and the model is evaluated for accuracy before saving.
 
 ML Model System Components
 ===========================
 
-### Visualize.py
+Visualize.py
+============
 
 `visualize.py` performs dimensionality reduction on the Iris dataset using UMAP (Uniform Manifold Approximation and Projection) and creates an interactive 2D scatter plot with Plotly. The scatter plot highlights the different species within the Iris dataset, with the projections plotted in a two-dimensional graph.
 
-#### Code Explanation
+Code Explanation
+================
 
 The script follows these steps:
 
@@ -277,11 +287,13 @@ The script follows these steps:
 3. **Create a scatter plot**: Using Plotly Express, it generates an interactive scatter plot where each point represents an observation from the Iris dataset, color-coded by species.
 4. **Export the plot**: The plot is saved as an HTML file (`index.html`) in the `public` directory, making it easy to open in a browser for interactive exploration.
 
-#### Requirements
+Requirements
+^^^^^^^^^^^^
 
 Before running the script, make sure that you have the required dependencies installed in your conda environment. This project specifically requires the `dsan-6700` environment to be activated.
 
-#####Activating the Conda Environment
+Activating the Conda Environment
+================================
 
 To activate the `dsan-6700` environment, run the following command in your terminal:
 
