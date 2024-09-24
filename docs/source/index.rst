@@ -74,3 +74,4 @@ To activate the `dsan-6700` environment, run the following command in your termi
 
 ```bash
 conda activate dsan-6700
+```
