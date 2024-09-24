@@ -15,6 +15,12 @@
 DSAN-6700-Assignment_1
 ==========================
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   modules
+
 
 
 Project Directory Structure

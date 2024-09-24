@@ -37,16 +37,12 @@ jobs:
       run: |
         poetry run sphinx-apidoc -o docs/source src  # Generate .rst files for the package
         poetry run sphinx-build -b html docs/source docs/build 
-
+        poetry run make html --directory docs/
+        
         #  Converts the .rst files into HTML documentation.
         # This command builds the HTML documentation from the .rst files in the docs/source directory and places the final documentation in docs/build.
         #  If  GitHub Actions workflow is using sphinx-apidoc to automatically generate the .rst files, 
         # then do not need to run ''poetry run sphinx-quickstart docs'' manually
-
-    - name: Verify Documentation
-      run: |
-        ls -la docs/build  # Verify that the HTML files were generated
-
 
     - name: Upload Documentation as Artifact
       uses: actions/upload-artifact@v3

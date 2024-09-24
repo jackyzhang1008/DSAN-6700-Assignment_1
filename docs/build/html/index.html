@@ -46,8 +46,8 @@
 </section>
 <section id="project-directory-structure">
 <h1>Project Directory Structure<a class="headerlink" href="#project-directory-structure" title="Link to this heading">¶</a></h1>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
-├── Makefile                      # File to automate tasks like building, testing, etc.
+<p>Below is the project directory structure:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>├── Makefile                      # File to automate tasks like building, testing, etc.
 ├── README.md                     # Unified README for the entire project
 ├── build/                        # Directory for build artifacts (compiled files, etc.)
 ├── docs/                         # Documentation directory
@@ -85,7 +85,7 @@
 │   │   └── train.py              # Script for training the ML model
 │   ├── out.json                  # Output file for model predictions
 │   ├── public/                   # Directory for public-facing assets (e.g., HTML files)
-│   │   └── index.html            # Public HTML file for viewing the ML model’s output
+│   │   └── index.html            # Public HTML file for viewing the ML model&#39;s output
 │   └── visualize.py              # Script for visualizing the ML results
 ├── pyproject.toml                # Poetry configuration file for dependencies and project metadata
 ├── source/                       # Source files for documentation
@@ -93,15 +93,12 @@
 │   ├── _templates/               # HTML templates for documentation
 │   ├── conf.py                   # Sphinx configuration file for documentation
 │   └── index.rst                 # Main documentation file for Sphinx
-└── src/                          # Source code directory for both Problem 3 and Problem 4</p>
-<blockquote>
-<div><dl class="simple">
-<dt>└── email_system/             # Module for Problem 3 (Email alert system)</dt><dd><p>├── alert.py              # Alert system logic
-└── mailer.py             # Email logic implementation</p>
-</dd>
-</dl>
-</div></blockquote>
-<p><a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a></p>
+└── src/                          # Source code directory for both Problem 3 and Problem 4
+    └── email_system/             # Module for Problem 3 (Email alert system)
+        ├── alert.py              # Alert system logic
+        └── mailer.py             # Email logic implementation
+</pre></div>
+</div>
 </section>
 <section id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h1>
@@ -141,57 +138,60 @@
 <li><p>The <cite>visualize.py</cite> script reduces the dimensionality of the Iris dataset using UMAP (Uniform Manifold Approximation and Projection) to generate 2D projections from the original 4D feature space.</p></li>
 <li><p>The resulting visualization is created using Plotly and saved as both an interactive HTML file (<cite>public/index.html</cite>) and a static PNG image (<cite>iris_clusters.png</cite>).</p></li>
 </ul>
-<p>### Usage Instructions</p>
-<p>#### 1. Train the Model</p>
-<p>To train the KNN model and save it for inference, run:</p>
 </li>
 </ol>
-<p>### Steps</p>
-<p>## Setting up:</p>
+<section id="usage-instructions">
+<h2>Usage Instructions<a class="headerlink" href="#usage-instructions" title="Link to this heading">¶</a></h2>
+</section>
+<section id="train-the-model">
+<h2>1. Train the Model<a class="headerlink" href="#train-the-model" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+<section id="setting-up">
+<h1>Setting up<a class="headerlink" href="#setting-up" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>To train the KNN model and save it for inference, run:</p>
+</div></blockquote>
+</section>
+<section id="steps">
+<h1>Steps<a class="headerlink" href="#steps" title="Link to this heading">¶</a></h1>
 <p>This section walks through the implementation of the email alert system, which sends email notifications using Python. The system is built using <cite>Poetry</cite> for modern project packaging, with GitHub Actions integrated for Continuous Integration (CI).</p>
-<ol class="arabic">
-<li><p>Cloning the Repository</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/your_username/DSAN-6700-Assignment_1.git</span>
-<span class="pre">cd</span> <span class="pre">DSAN-6700-Assignment_1</span>
-<span class="pre">`</span></code></p>
-</div></blockquote>
-</li>
-<li><p>Setting up a virtual environment</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">dsan-6700</span> <span class="pre">#</span> <span class="pre">to</span> <span class="pre">create</span> <span class="pre">th</span> <span class="pre">environment</span>
-<span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">environment.yml</span> <span class="pre">#</span> <span class="pre">to</span> <span class="pre">save</span> <span class="pre">it</span> <span class="pre">into</span> <span class="pre">the</span> <span class="pre">file</span> <span class="pre">for</span> <span class="pre">others</span> <span class="pre">to</span> <span class="pre">use</span> <span class="pre">it</span>
-<span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">dsan-6700</span> <span class="pre">#</span> <span class="pre">to</span> <span class="pre">activate</span> <span class="pre">the</span> <span class="pre">environment</span>
-<span class="pre">`</span></code></p>
-</div></blockquote>
-</li>
-<li><p>Install Poetry and its dependencies</p>
-<blockquote>
-<div><p><a href="#id7"><span class="problematic" id="id8">``</span></a>`
-poetry install</p>
-<p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a></p>
-</div></blockquote>
-</li>
+<ol class="arabic simple">
+<li><p>Cloning the Repository</p></li>
 </ol>
-<p>## Mail Alert System</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your_username/DSAN-6700-Assignment_1.git
+<span class="nb">cd</span><span class="w"> </span>DSAN-6700-Assignment_1
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Setting up a virtual environment</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>dsan-6700<span class="w"> </span><span class="c1"># to create the environment</span>
+conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml<span class="w"> </span><span class="c1"># to save it into the file for others to use it</span>
+conda<span class="w"> </span>activate<span class="w"> </span>dsan-6700<span class="w"> </span><span class="c1"># to activate the environment</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Install Poetry and its dependencies</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>install
+</pre></div>
+</div>
+</section>
+<section id="mail-alert-system">
+<h1>Mail Alert System<a class="headerlink" href="#mail-alert-system" title="Link to this heading">¶</a></h1>
 <p>1. Start Local SMTP Server
 This will start the local SMTP debugging server that will print the email content to the terminal instead of actually sending it</p>
-<blockquote>
-<div><p><a href="#id13"><span class="problematic" id="id14">``</span></a>`
-poetry run python -m smtpd -n -c DebuggingServer localhost:1025</p>
-<p><a href="#id15"><span class="problematic" id="id16">``</span></a><a href="#id17"><span class="problematic" id="id18">`</span></a></p>
-</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>smtpd<span class="w"> </span>-n<span class="w"> </span>-c<span class="w"> </span>DebuggingServer<span class="w"> </span>localhost:1025
+</pre></div>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>Send an email alert</p></li>
 </ol>
 <p>We run the  <cite>alert.py</cite> works, make sure we run the following code to trigger an email notification</p>
-<blockquote>
-<div><p><a href="#id19"><span class="problematic" id="id20">``</span></a>`
-poetry run python src/email_system/alert.py -s <a class="reference external" href="mailto:sender&#37;&#52;&#48;example&#46;com">sender<span>&#64;</span>example<span>&#46;</span>com</a> -r <a class="reference external" href="mailto:recipient&#37;&#52;&#48;example&#46;com">recipient<span>&#64;</span>example<span>&#46;</span>com</a> -j “Test Subject” -b “This is a test email.”</p>
-<p><a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
-</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>src/email_system/alert.py<span class="w"> </span>-s<span class="w"> </span>sender@example.com<span class="w"> </span>-r<span class="w"> </span>recipient@example.com<span class="w"> </span>-j<span class="w"> </span><span class="s2">&quot;Test Subject&quot;</span><span class="w"> </span>-b<span class="w"> </span><span class="s2">&quot;This is a test email.&quot;</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><p><cite>Alert.py</cite>: This script is responsible for gathering the necessary information (sender, recipient, subject, and body of the email) from the command line and passing it to the mailer.py module to actually send the email.</p></li>
 <li><p><cite>Mailer.py</cite>: This script contains the logic for constructing and sending the email using the SMTP (Simple Mail Transfer Protocol) protocol. It’s a utility that can be reused by other parts of the application as well.</p></li>
@@ -201,29 +201,35 @@ poetry run python src/email_system/alert.py -s <a class="reference external" hre
 <p>The project uses GitHub Actions for CI to automate testing and code quality checks. The CI workflow is triggered when changes are pushed to the repository as <cite>ci.yml</cite></p>
 </li>
 </ol>
-<p>## ML Model Systems</p>
-<ol class="arabic">
-<li><p>Set up a virtual environment and train the model using the <cite>train.py</cite> which is used to train the KNN model</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">problem4/train.py</span>
-<span class="pre">`</span></code></p>
-</div></blockquote>
-</li>
-<li><p>Then perform inference using <cite>inference.py</cite> which loads the saved KNN model and performs inference on new data on new data using the trained KNN model</p>
-<blockquote>
-<div><p><a href="#id25"><span class="problematic" id="id26">``</span></a>`
-poetry run python problem4/inference.py –data “out.json”</p>
-<p><a href="#id27"><span class="problematic" id="id28">``</span></a>`
-The inferences here will be saved as <cite>out.json</cite></p>
-</div></blockquote>
-</li>
-<li><p>Visualise <cite>visualize.py</cite> script performs UMAP dimensionality reduction and generates a 2D visualization of the Iris dataset</p>
-<p><a href="#id29"><span class="problematic" id="id30">``</span></a>`
-poetry run python problem4/visualize.py</p>
-<p><a href="#id31"><span class="problematic" id="id32">``</span></a><a href="#id33"><span class="problematic" id="id34">`</span></a></p>
-</li>
+</section>
+<section id="ml-model-systems">
+<h1>ML Model Systems<a class="headerlink" href="#ml-model-systems" title="Link to this heading">¶</a></h1>
+<p>The overall script follows these steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Load the Iris dataset</strong>: It uses the built-in Iris dataset from <cite>sklearn.datasets</cite>.</p></li>
+<li><p><strong>Apply UMAP</strong>: The <cite>UMAP</cite> algorithm is used to reduce the dimensionality of the dataset.</p></li>
+<li><p><strong>Create a scatter plot</strong>: Using Plotly Express, it generates an interactive scatter plot where each point represents an observation from the Iris dataset, color-coded by species.</p></li>
+<li><p><strong>Export the plot</strong>: The plot is saved as an HTML file (<cite>index.html</cite>) in the <cite>public</cite> directory, making it easy to open in a browser for interactive exploration.</p></li>
 </ol>
+<ol class="arabic simple">
+<li><p>Set up a virtual environment and train the model using the <cite>train.py</cite> which is used to train the KNN model</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>problem4/train.py
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Then perform inference using <cite>inference.py</cite> which loads the saved KNN model and performs inference on new data on new data using the trained KNN model</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>problem4/inference.py<span class="w"> </span>--data<span class="w"> </span><span class="s2">&quot;out.json&quot;</span>
+</pre></div>
+</div>
+<p>The inferences here will be saved as <cite>out.json</cite></p>
+<ol class="arabic simple" start="3">
+<li><p>Visualise <cite>visualize.py</cite> script performs UMAP dimensionality reduction and generates a 2D visualization of the Iris dataset</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>problem4/visualize.py
+</pre></div>
+</div>
 <p>The result will be saved as an image (iris_clusters.png) and an interactive HTML file (index.html).</p>
 <ol class="arabic simple" start="4">
 <li><p>Documentation : <strong>Sphinx</strong></p></li>
@@ -231,23 +237,20 @@ poetry run python problem4/visualize.py</p>
 <p>We use Sphinx for generating technical documentation. The documentation can be built locally and viewed as an HTML file.</p>
 <blockquote>
 <div><ul class="simple">
-<li><dl class="simple">
-<dt>Install Dependencies</dt><dd><p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">sphinx</span>
-<span class="pre">`</span></code></p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Build the Documentation</dt><dd><p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">cd</span> <span class="pre">docs</span>
-<span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">make</span> <span class="pre">html</span>
-<span class="pre">`</span></code></p>
-</dd>
-</dl>
-</li>
+<li><p>Install Dependencies</p></li>
 </ul>
 </div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>add<span class="w"> </span>sphinx
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Build the Documentation</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>docs
+poetry<span class="w"> </span>run<span class="w"> </span>make<span class="w"> </span>html
+try<span class="w"> </span>run<span class="w"> </span>make<span class="w"> </span>html
+</pre></div>
+</div>
 <p>The documentation will be generated in the docs/build/html/ directory.</p>
 <blockquote>
 <div><ul>
@@ -258,42 +261,6 @@ poetry run python problem4/visualize.py</p>
 </ul>
 </div></blockquote>
 <p>readthedocs: [dsan-6700-assignment-1.readthedocs.io](<a class="reference external" href="http://dsan-6700-assignment-1.readthedocs.io/">http://dsan-6700-assignment-1.readthedocs.io/</a>)</p>
-</section>
-<section id="project-documentation">
-<h1>Project Documentation<a class="headerlink" href="#project-documentation" title="Link to this heading">¶</a></h1>
-<p>Welcome to the documentation for <strong>DSAN 6700 Assignment 1</strong>. This project consists of two main components:</p>
-<ol class="arabic simple">
-<li><p><strong>Email Alert System</strong>: A Python-based system for sending email notifications.</p></li>
-<li><p><strong>ML Model System</strong>: A machine learning application that trains, infers, and visualizes a KNN model using the Iris dataset.</p></li>
-</ol>
-<p>The documentation provides instructions on how to set up, use, and contribute to the project. Below is the table of contents to help navigate through the project documentation.</p>
-</section>
-<section id="project-overview">
-<h1>Project Overview<a class="headerlink" href="#project-overview" title="Link to this heading">¶</a></h1>
-<p>###Email Alert System</p>
-<p>The email alert system allows users to send automated email notifications using a local SMTP server. The system is implemented using modern Python packaging and includes unit tests for reliability.</p>
-<p>###ML Model System</p>
-<p>The ML Model System trains a K-Nearest Neighbors (KNN) model using the Iris dataset. The system includes scripts for training, inference, and visualization of the results. The visualizations use UMAP for dimensionality reduction, and the model is evaluated for accuracy before saving.</p>
-</section>
-<section id="ml-model-system-components">
-<h1>ML Model System Components<a class="headerlink" href="#ml-model-system-components" title="Link to this heading">¶</a></h1>
-<p>### Visualize.py</p>
-<p><cite>visualize.py</cite> performs dimensionality reduction on the Iris dataset using UMAP (Uniform Manifold Approximation and Projection) and creates an interactive 2D scatter plot with Plotly. The scatter plot highlights the different species within the Iris dataset, with the projections plotted in a two-dimensional graph.</p>
-<p>#### Code Explanation</p>
-<p>The script follows these steps:</p>
-<ol class="arabic simple">
-<li><p><strong>Load the Iris dataset</strong>: It uses the built-in Iris dataset from <cite>sklearn.datasets</cite>.</p></li>
-<li><p><strong>Apply UMAP</strong>: The <cite>UMAP</cite> algorithm is used to reduce the dimensionality of the dataset.</p></li>
-<li><p><strong>Create a scatter plot</strong>: Using Plotly Express, it generates an interactive scatter plot where each point represents an observation from the Iris dataset, color-coded by species.</p></li>
-<li><p><strong>Export the plot</strong>: The plot is saved as an HTML file (<cite>index.html</cite>) in the <cite>public</cite> directory, making it easy to open in a browser for interactive exploration.</p></li>
-</ol>
-<p>#### Requirements</p>
-<p>Before running the script, make sure that you have the required dependencies installed in your conda environment. This project specifically requires the <cite>dsan-6700</cite> environment to be activated.</p>
-<p>#####Activating the Conda Environment</p>
-<p>To activate the <cite>dsan-6700</cite> environment, run the following command in your terminal:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">dsan-6700</span>
-<span class="pre">`</span></code></p>
 </section>
 
 

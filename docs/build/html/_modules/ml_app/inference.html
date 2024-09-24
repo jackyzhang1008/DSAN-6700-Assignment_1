@@ -34,6 +34,7 @@
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">.train</span> <span class="kn">import</span> <span class="n">Model</span>
 
+
 <div class="viewcode-block" id="main">
 <a class="viewcode-back" href="../../ml_app.html#ml_app.inference.main">[docs]</a>
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -52,7 +53,7 @@
     <span class="n">data</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;DATA&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No data provided&quot;</span><span class="p">)</span>
-    
+
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data loaded from environment variable:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 
     <span class="c1"># Parse the JSON data</span>
@@ -75,20 +76,21 @@
     <span class="c1"># Perform inference on the parsed data</span>
     <span class="n">records</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">dataset</span><span class="p">,</span>           <span class="c1"># The dataset used for training</span>
-            <span class="s2">&quot;architecture&quot;</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">architecture</span><span class="p">,</span> <span class="c1"># Model architecture used (e.g., KNN)</span>
-            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">eval</span><span class="p">,</span>             <span class="c1"># Model evaluation score (accuracy)</span>
-            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">record</span><span class="p">,</span>                 <span class="c1"># Input data for inference</span>
-            <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="n">label</span><span class="p">,</span>                 <span class="c1"># Predicted label from the model</span>
+            <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">dataset</span><span class="p">,</span>  <span class="c1"># The dataset used for training</span>
+            <span class="s2">&quot;architecture&quot;</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">architecture</span><span class="p">,</span>  <span class="c1"># Model architecture used (e.g., KNN)</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">eval</span><span class="p">,</span>  <span class="c1"># Model evaluation score (accuracy)</span>
+            <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">record</span><span class="p">,</span>  <span class="c1"># Input data for inference</span>
+            <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="n">label</span><span class="p">,</span>  <span class="c1"># Predicted label from the model</span>
         <span class="p">}</span>
         <span class="k">for</span> <span class="n">record</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">m</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
     <span class="p">]</span>
-    
+
     <span class="c1"># Save the inference output to a JSON file</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;out.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">records</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-    
+
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inference completed. Results saved to &#39;out.json&#39;.&quot;</span><span class="p">)</span></div>
+
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
