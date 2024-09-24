@@ -130,10 +130,10 @@ This section walks through the implementation of the email alert system, which s
 
 1. Cloning the Repository 
 
-    ```
+    ``
     git clone https://github.com/your_username/DSAN-6700-Assignment_1.git
     cd DSAN-6700-Assignment_1
-    ```
+    ``
 
 2. Setting up a virtual environment 
 
