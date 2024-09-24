@@ -130,18 +130,20 @@ This section walks through the implementation of the email alert system, which s
 
 1. Cloning the Repository 
 
-    ```
+.. code-block:: bash
+
     git clone https://github.com/your_username/DSAN-6700-Assignment_1.git
     cd DSAN-6700-Assignment_1
-    ```
+
 
 2. Setting up a virtual environment 
 
-    ```
-    python3 -m venv dsan-6700 # to create th environment
+.. code-block:: bash
+
+    python3 -m venv dsan-6700 # to create the environment
     conda env create -f environment.yml # to save it into the file for others to use it
     conda activate dsan-6700 # to activate the environment
-    ```
+
 
 3. Install Poetry and its dependencies 
 
@@ -158,18 +160,19 @@ This section walks through the implementation of the email alert system, which s
 1. Start Local SMTP Server 
 This will start the local SMTP debugging server that will print the email content to the terminal instead of actually sending it
 
-    ```
+.. code-block:: bash
 
     poetry run python -m smtpd -n -c DebuggingServer localhost:1025
-    ```
+
 
 2. Send an email alert
 
 We run the  `alert.py` works, make sure we run the following code to trigger an email notification 
 
-    ```
+.. code-block:: bash
+
     poetry run python src/email_system/alert.py -s sender@example.com -r recipient@example.com -j "Test Subject" -b "This is a test email."
-    ```
+
 * `Alert.py`: This script is responsible for gathering the necessary information (sender, recipient, subject, and body of the email) from the command line and passing it to the mailer.py module to actually send the email. 
 * `Mailer.py`: This script contains the logic for constructing and sending the email using the SMTP (Simple Mail Transfer Protocol) protocol. It's a utility that can be reused by other parts of the application as well.
 
@@ -181,22 +184,25 @@ We run the  `alert.py` works, make sure we run the following code to trigger an 
 
 1. Set up a virtual environment and train the model using the `train.py` which is used to train the KNN model 
 
-    ```
+.. code-block:: bash
+
     poetry run python problem4/train.py
-    ```
+
 
 2. Then perform inference using `inference.py` which loads the saved KNN model and performs inference on new data on new data using the trained KNN model
    
-    ```
+.. code-block:: bash
+
     poetry run python problem4/inference.py --data "out.json"
-    ```
-    The inferences here will be saved as `out.json`
+
+The inferences here will be saved as `out.json`
 
 3.  Visualise `visualize.py` script performs UMAP dimensionality reduction and generates a 2D visualization of the Iris dataset
 
-    ```
+.. code-block:: bash
+
     poetry run python problem4/visualize.py
-    ```
+
 The result will be saved as an image (iris_clusters.png) and an interactive HTML file (index.html).
 
 4. Documentation : **Sphinx**
@@ -205,14 +211,18 @@ We use Sphinx for generating technical documentation. The documentation can be b
 
  * Install Dependencies
    
-    ```
-    poetry add sphinx
-    ```
- * Build the Documentation 
+.. code-block:: bash
+   
+   poetry add sphinx
+
+* Build the Documentation 
     
-    ```
+.. code-block:: bash
+
     cd docs
     poetry run make html
+
+try run make html
     ```
 The documentation will be generated in the docs/build/html/ directory.
 
@@ -276,10 +286,9 @@ Before running the script, make sure that you have the required dependencies ins
 
 To activate the `dsan-6700` environment, run the following command in your terminal:
 
-```
-conda activate dsan-6700
-
-```
+.. code-block:: bash
+   
+   conda activate dsan-6700
 
 
 
