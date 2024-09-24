@@ -146,6 +146,7 @@ This section walks through the implementation of the email alert system, which s
 3. Install Poetry and its dependencies 
 
     ```
+
     poetry install 
 
     ```
@@ -158,6 +159,7 @@ This section walks through the implementation of the email alert system, which s
 This will start the local SMTP debugging server that will print the email content to the terminal instead of actually sending it
 
     ```
+    
     poetry run python -m smtpd -n -c DebuggingServer localhost:1025
 
     ```
