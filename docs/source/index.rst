@@ -22,7 +22,6 @@ DSAN-6700-Assignment_1
    modules
 
 
-
 Project Directory Structure
 ===========================
 

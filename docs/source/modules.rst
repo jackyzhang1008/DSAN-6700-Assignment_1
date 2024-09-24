@@ -5,4 +5,4 @@ src
    :maxdepth: 4
 
    email_system
-   ml_app
+   .. ml_app
