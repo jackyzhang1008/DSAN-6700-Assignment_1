@@ -40,11 +40,11 @@ The documentation provides instructions on how to set up, use, and contribute to
 Project Overview
 ================
 
-### Email Alert System
+###Email Alert System
 
 The email alert system allows users to send automated email notifications using a local SMTP server. The system is implemented using modern Python packaging and includes unit tests for reliability.
 
-### ML Model System
+###ML Model System
 
 The ML Model System trains a K-Nearest Neighbors (KNN) model using the Iris dataset. The system includes scripts for training, inference, and visualization of the results. The visualizations use UMAP for dimensionality reduction, and the model is evaluated for accuracy before saving.
 
@@ -68,7 +68,7 @@ The script follows these steps:
 
 Before running the script, make sure that you have the required dependencies installed in your conda environment. This project specifically requires the `dsan-6700` environment to be activated.
 
-##### Activating the Conda Environment
+#####Activating the Conda Environment
 
 To activate the `dsan-6700` environment, run the following command in your terminal:
 

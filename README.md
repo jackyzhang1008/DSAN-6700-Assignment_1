@@ -105,17 +105,102 @@ The ML Model System focuses on training, performing inference, and visualizing a
 
 ### Steps
 
-1.  Clone the repository:
+## Setting up:
 
-    ```         
-    git clone https://github.com/jackyzhang1008/DSAN-6700-Assignment_1.git
-    cd DSAN-6700-Assignment_1/problem_3
+This section walks through the implementation of the email alert system, which sends email notifications using Python. The system is built using `Poetry` for modern project packaging, with GitHub Actions integrated for Continuous Integration (CI).
+
+1. Cloning the Repository 
+
+    ```
+    git clone https://github.com/your_username/DSAN-6700-Assignment_1.git
+    cd DSAN-6700-Assignment_1
     ```
 
-2.  Set up the virtual environment using Poetry: `poetry install`
+2. Setting up a virtual environment 
 
-3.  Start the local SMTP debugging server: `poetry run python -m smtpd -n -c DebuggingServer localhost:1025`
+    ```
+    python3 -m venv dsan-6700 # to create th environment
+    conda env create -f environment.yml # to save it into the file for others to use it
+    conda activate dsan-6700 # to activate the environment
+    ```
 
-4.  In a separate terminal, run the email alert script: `poetry run python src/alert.py -s sender@example.com -r recipient@example.com -j "Subject" -b "Email Body` .After running the email alert script, the SMTP terminal will display the email message that was "sent." It won’t actually send the email, but you will see the details printed in the terminal.
+3. Install Poetry and its dependencies 
+
+    ```
+    poetry install 
+
+    ```
+
+
+## Mail Alert Sys
+
+
+1. Start Local SMTP Server 
+This will start the local SMTP debugging server that will print the email content to the terminal instead of actually sending it
+
+    ```
+    poetry run python -m smtpd -n -c DebuggingServer localhost:1025
+
+    ```
+
+2. Send an email alert
+
+We run the  `alert.py` works, make sure we run the following code to trigger an email notification 
+
+    ```
+    poetry run python src/email_system/alert.py -s sender@example.com -r recipient@example.com -j "Test Subject" -b "This is a test email."
+
+    ```
+* `Alert.py`: This script is responsible for gathering the necessary information (sender, recipient, subject, and body of the email) from the command line and passing it to the mailer.py module to actually send the email. 
+* `Mailer.py`: This script contains the logic for constructing and sending the email using the SMTP (Simple Mail Transfer Protocol) protocol. It's a utility that can be reused by other parts of the application as well.
+
+3. Continuous Integration (CI)
+   
+   The project uses GitHub Actions for CI to automate testing and code quality checks. The CI workflow is triggered when changes are pushed to the repository as `ci.yml`
+
+## ML Model Systems 
+
+1. Set up a virtual environment and train the model using the `train.py` which is used to train the KNN model 
+
+    ```
+    poetry run python problem4/train.py
+    ```
+
+2. Then perform inference using `inference.py` which loads the saved KNN model and performs inference on new data on new data using the trained KNN model
+   
+    ```
+    poetry run python problem4/inference.py --data "out.json"
+
+    ```
+    The inferences here will be saved as `out.json`
+
+3.  Visualise `visualize.py` script performs UMAP dimensionality reduction and generates a 2D visualization of the Iris dataset
+
+    ```
+    poetry run python problem4/visualize.py
+
+    ```
+The result will be saved as an image (iris_clusters.png) and an interactive HTML file (index.html).
+
+4. Documentation : **Sphinx**
+
+We use Sphinx for generating technical documentation. The documentation can be built locally and viewed as an HTML file. 
+
+ * Install Dependencies
+    ```
+    poetry add sphinx
+    ```
+ * Build the Documentation 
+    ```
+    cd docs
+    poetry run make html
+    ```
+The documentation will be generated in the docs/build/html/ directory.
+
+  * We use GitHub Actions for CI automation. The CI pipeline runs every time new changes are pushed to the repository.
+  
+    We use GitHub Actions for CI automation, ensuring that the pipeline runs automatically whenever new changes are pushed to the repository. This allows us to enforce code quality, automate testing, and generate documentation. For the Email Alert System, the workflow is defined in mailer-ci.yml. The steps involve setting up an Ubuntu runner, installing Python 3.9, and using Poetry to install the project's dependencies. It then runs ruff to check code formatting and finally builds the documentation using Sphinx.
+
+    For the ML Model System, the workflow is defined in ml_app-ci.yml. This workflow also sets up an Ubuntu runner and installs Python 3.9, followed by installing dependencies using Poetry. The pipeline then runs unit tests with pytest, trains the KNN model, performs inference on synthetic data, and finally builds and uploads the model artifacts. It also generates and publishes the project documentation to ReadTheDocs, ensuring that the documentation remains up to date with every new push.
 
 readthedocs: [dsan-6700-assignment-1.readthedocs.io](http://dsan-6700-assignment-1.readthedocs.io/)
