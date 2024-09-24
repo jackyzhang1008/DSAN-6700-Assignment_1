@@ -159,7 +159,7 @@ This section walks through the implementation of the email alert system, which s
 This will start the local SMTP debugging server that will print the email content to the terminal instead of actually sending it
 
     ```
-    
+
     poetry run python -m smtpd -n -c DebuggingServer localhost:1025
 
     ```
@@ -185,6 +185,7 @@ We run the  `alert.py` works, make sure we run the following code to trigger an 
 
     ```
     poetry run python problem4/train.py
+
     ```
 
 2. Then perform inference using `inference.py` which loads the saved KNN model and performs inference on new data on new data using the trained KNN model
@@ -210,11 +211,14 @@ We use Sphinx for generating technical documentation. The documentation can be b
  * Install Dependencies
     ```
     poetry add sphinx
+
     ```
  * Build the Documentation 
+    
     ```
     cd docs
     poetry run make html
+    
     ```
 The documentation will be generated in the docs/build/html/ directory.
 
