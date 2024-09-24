@@ -145,10 +145,11 @@ This section walks through the implementation of the email alert system, which s
 
 3. Install Poetry and its dependencies 
 
-    ```
 
-    poetry install 
-    ```
+.. code-block:: bash
+
+    poetry install
+
 
 
 ## Mail Alert System
